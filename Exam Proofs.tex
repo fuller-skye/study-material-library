@@ -1,0 +1,125 @@
+\documentclass[letter, 12pt]{article} %change font size here
+
+\parindent=0pt			% No paragraph indents
+\textwidth=6.5in 			% Width of the typeable area
+\textheight=8.5in 			% Height of typeable area
+\topmargin=0in 			% Top magin size
+\oddsidemargin=0in 		% Side margin size
+
+
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{nopageno}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[svgnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{setspace}
+
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\bs}{\backslash}
+\newcommand{\0}{\emptyset}
+\newcommand{\Z}{\mathbb{Z}}   
+\newcommand{\R}{\mathbb{R}}  
+\newcommand{\C}{\mathbb{C}}  
+\newcommand{\N}{\mathbb{N}}  
+\newcommand{\a}{\alpha}
+\newcommand{\b}{\beta}
+\newcommand{\ep}{\epsilon}
+\newcommand{\si}{\sigma}
+
+
+
+\newcommand{\lb}{\left\{}           
+\newcommand{\rb}{\right\}}        
+
+\renewcommand{\lnot}{\sim}       
+
+
+
+\document
+\doublespacing
+
+\begin{document}
+\documentclass
+
+
+Skye Fuller \hfill Exam Proofs  \hfill \today
+\hrule
+\vskip 1
+\begin{spacing}{1.5}
+
+\hskip
+
+
+\hskip
+\hrule
+\hskip
+
+We are trying to prove that for all lim's, $\lim{a_n + b_n}= \lim{a_n} + \lim{b_n}$
+
+Let $A = \lim{a_n}$ and $B = \lim{b_n}$. And let $c$ be an arbitrary number such that $c\in {a_n} + {b_n}$.
+
+Assume $\forall a \in {a_n}$ and $\forall b \in {b_n}$, $A \geq a$ and $B \geq b$. 
+
+Then, $\forall a+b \in{a_n} + {b_n}$, $A+B \geq a+b$.
+
+Let $c\in  {a_n} + {b_n}$, then $\exists a \in {a_n} $, $b\in  {b_n}$ such that $c=a+b$, then $c=a+b\leq a+B\leq A+B$ as $ a \geq A$ and $b\geq B$.
+
+Since $c$ was arbitrary $A+B$ is the limit for ${a_n} + {b_n}$.
+
+
+
+Let $\forall \ep > 0$, $\exists c \in {a_n} + {b_n}$, with $A+B+\ep>c\geq A+B$.
+
+We are trying to prove that $\forall \ep >0$, $(A+B +\ep>c)$.
+
+$\exists a \in {a_n} $ and $\exists b \in {b_n}$ such that $a<A+ \frac{\ep}{2}$ and $b<B + \frac{\ep}{2}$. This is because $A=\lim{a_n}$ and $B=\lim{b_n}$
+
+Then because  $a<\alpha + \frac{\ep}{2}$ and $b<\beta +\frac{\ep}{2}$  it is true that $\alpha + \beta + \frac{2\ep}{2}> a+b\geq\alpha +\beta$. 
+
+Since $a+b=c$ we can conclude that $(\alpha +\beta +\ep>c)$. And since we have proven that $c\geq \alpha +\beta$, we can say  $\alpha+\beta+\ep>c\geq\alpha+\beta$. 
+
+
+Based on this conclusion and how we got there, we have proven that if $\alpha =$ lim(A), $\beta =$ lim(B) then, $\forall a\in A\rightarrow \alpha+\ep>a\geq \alpha$, $\forall b\in B\rightarrow \beta+\ep>b\geq\beta$ are true, and $\forall a+b\in A+B\rightarrow \alpha+\beta+\ep>a+b\geq\alpha+\beta$ are true.
+
+Therefore $(\alpha+\beta)= \alpha +\beta$, which implies lim(A+B)=lim(A)+lim(B) is a true statement.       \Box
+
+\hskip
+\hrule
+\hskip
+
+Need to prove that $a_n = \ds\frac{n}{n+1}$ is increasing and its limit is 1. 
+
+First we can prove that the limit is 1. Assume that $\alpha$ is an arbitrarily large number. When we plug in $\alpha$ to $\ds\frac{n}{n+1}$, we get $\ds\frac{\alpha}{\alpha+1}$, in which the plus one becomes negligible as we increase $n$ to$\alpha$ and beyond $\alpha$. This tells us that $\ds\frac{n}{n+1}$ has a limit of 1.
+
+Next we need to prove that $\ds\frac{n}{n+1}$ is increasing. 
+
+Let $\beta$ be an arbitrary number and $\beta +1$ be a slightly larger number. If we plug in both to the equation we get $\ds\frac{\beta}{\beta+1}$ and $\ds\frac{\beta +1}{\beta +1 +1}$.  If we give the fractions the same denominator, we get $\ds\frac{\beta^2 +\beta +\beta}{(\beta +1)\beta +1 +1}$ and $\ds\frac{\beta^2+\beta+\beta +1}{(\beta +1)\beta +1 +1}$. And $\ds\frac{\beta^2 +\beta +\beta}{(\beta +1)\beta +1 +1} < \ds\frac{\beta^2+\beta+\beta +1}{(\beta +1)\beta +1 +1}$. So for any $\beta$ plugged into the equation, when we plug in $\beta+1$ the equation becomes larger. 
+
+Therefore the equation is increasing with a limit of 1.
+
+
+\hskip
+\hrule
+\hskip
+
+
+
+\hskip
+\hrule
+\hskip
+
+
+
+\end{spacing}
+\end{document}

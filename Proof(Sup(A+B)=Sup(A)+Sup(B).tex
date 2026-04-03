@@ -1,0 +1,113 @@
+\documentclass[letter, 12pt]{article} %change font size here
+
+\parindent=0pt			% No paragraph indents
+\textwidth=6.5in 			% Width of the typeable area
+\textheight=8.5in 			% Height of typeable area
+\topmargin=0in 			% Top magin size
+\oddsidemargin=0in 		% Side margin size
+
+
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{nopageno}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[svgnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{setspace}
+
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\bs}{\backslash}
+\newcommand{\0}{\emptyset}
+\newcommand{\Z}{\mathbb{Z}}   
+\newcommand{\R}{\mathbb{R}}  
+\newcommand{\C}{\mathbb{C}}  
+\newcommand{\N}{\mathbb{N}}  
+\newcommand{\a}{\alpha}
+\newcommand{\b}{\beta}
+\newcommand{\ep}{\epsilon}
+\newcommand{\si}{\sigma}
+
+
+
+\newcommand{\lb}{\left\{}           
+\newcommand{\rb}{\right\}}        
+
+\renewcommand{\lnot}{\sim}       
+
+
+
+\document
+\doublespacing
+
+\begin{document}
+\documentclass
+
+
+Skye Fuller \hfill  Proof - Sup(A+B)=Sup(A)+Sup(B)  \hfill \today
+\hrule
+\vskip 1
+\begin{spacing}{1.5}
+
+\hskip
+
+
+Needed Axioms, Postulates, and Theorems: 
+
+Upper Bound - \ds$\forall x\in S$ there exists a number $\si$ such that $x\leq\si$.
+
+Least Upper Bound(Supreme) - \ds$\exists x\in S$ and $\forall \ep>0$ such that $\si - \ep <x\leq\si$.
+
+\hskip
+\hrule
+\hskip
+
+We are trying to prove that for all g.l.b.'s, g.l.b.(A+B)=g.l.b.(A)+g.l.b.(B).
+
+Let $\alpha$ = g.l.b.(A) and $\beta$ = g.l.b.(B). And let c be an arbitrary number such that $c\in A+B$.
+
+Assume $\forall a \in A$ and $\forall b \in B$, $\alpha \leq a$ and $\beta \leq b$. 
+
+Then, $\forall a+b \in A+B$, $\alpha - \beta \leq a+b$.
+
+Let $c\in  A+B$, then $\exists a \in A$, $b\in B$ such that $c=a+b$, then $c\geq a+\beta\geq \alpha +\beta$ as $ a \geq \alpha$, $b\geq \beta$.
+
+Since $c$ was arbitrary $\alpha +\beta$ is an lower bound for A+B.
+
+
+
+Let $\forall \ep > 0$, $\exists c \in A+B$, with $\alpha+\beta+\ep>c\geq\alpha+\beta$.
+
+We are trying to prove that $\forall \ep >0$, $(\alpha +\beta +\ep>c)$.
+
+$\exists a \in A$ and $\exists b \in B$ such that $a<\alpha + \frac{\ep}{2}$ and $b<\beta + \frac{\ep}{2}$. This is because $\alpha$=g.l.b.(A) and $\beta$ = g.l.b.(B).
+
+Then because  $a<\alpha + \frac{\ep}{2}$ and $b<\beta +\frac{\ep}{2}$  it is true that $\alpha + \beta + \frac{2\ep}{2}> a+b\geq\alpha +\beta$. 
+
+Since $a+b=c$ we can conclude that $(\alpha +\beta +\ep>c)$. And since we have proven that $c\geq \alpha +\beta$, we can say  $\alpha+\beta+\ep>c\geq\alpha+\beta$. 
+
+
+Based on this conclusion and how we got there, we have proven that if $\alpha =$ g.l.b.(A), $\beta =$ g.l.b.(B) then, $\forall a\in A\rightarrow \alpha+\ep>a\geq \alpha$, $\forall b\in B\rightarrow \beta+\ep>b\geq\beta$ are true, and $\forall a+b\in A+B\rightarrow \alpha+\beta+\ep>a+b\geq\alpha+\beta$ are true.
+
+Therefore $(\alpha+\beta)= \alpha +\beta$, which implies g.l.b.(A+B)=g.l.b.(A)+g.l.b.(B) is a true statement.       \Box
+
+
+
+
+
+
+
+
+
+
+\end{spacing}
+\end{document}
