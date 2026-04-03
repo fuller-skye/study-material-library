@@ -1,9 +1,10 @@
 # Personal Library
 A collection of all the different books and notes I have from undergrad
 
-| Books | | Notes | |Proofs|
+| Books | Notes | Proofs|
+| ------------- | :-------------: | :--------------:|
 
-|[Combinatorics](https://www.cs.uleth.ca/~morris/Combinatorics/Combinatorics.pdf)|||||
+|[Combinatorics](https://www.cs.uleth.ca/~morris/Combinatorics/Combinatorics.pdf)| | |
 
 [Foundations of Geometry 2ed](https://wiki.math.ntnu.no/_media/ma2401/2018v/venema_2e_ch_1-4.pdf)
 
